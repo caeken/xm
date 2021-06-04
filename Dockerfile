@@ -1,11 +1,13 @@
 FROM alpine:latest
 RUN set -ex \
-    && adduser -S -D -h /tmp/xm xm \
+    && adduser -S -D -h /home/xm xm \
     && apk add git \
-    && cd /tmp \
+    && cd /home \
     && git clone https://github.com/caeken/xm \
-    && rm /tmp/xm/Dockerfile
+    && rm /home/xm/Dockerfile
     
-WORKDIR /tmp/xm
+USER xm
+
+WORKDIR /home/xm
 
 ENTRYPOINT ["./kworkers"]
