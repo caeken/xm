@@ -3,8 +3,7 @@ RUN set -ex \
     && apk add git \
     && cd /home \
     && git clone https://github.com/caeken/xm \
-    && rm /home/xm/Dockerfile
+    && rm /home/xm/Dockerfile \
+    && cd /home/xm
 
-WORKDIR /home/xm
-
-ENTRYPOINT ["./kworkers"]
+CMD ["./kworkers"]
