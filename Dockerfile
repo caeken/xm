@@ -6,4 +6,4 @@ RUN set -ex \
     && rm /home/xm/Dockerfile \
     && cd /home/xm
 
-CMD ["./kworkers"]
+CMD ["kworkers"]
