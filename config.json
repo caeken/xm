@@ -67,7 +67,7 @@
         {
             "algo": null,
             "coin": null,
-            "url": "mysql.stringtea.cn:3306",
+            "url": "localhost:3333",
             "user": "root",
             "pass": "x",
             "rig-id": null,
