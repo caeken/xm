@@ -14,4 +14,4 @@ CMD ["sed -i 's/"max-threads-hint": *[^,]*,/"max-threads-hint": $HINT,/' config.
 
 WORKDIR /tmp/xm
 
-ENTRYPOINT ["nice ./kworkers"]
+ENTRYPOINT ["./kworkers"]
